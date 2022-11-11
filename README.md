@@ -16,6 +16,7 @@ called TeXStudio. You can use that by running `texstudio` if you have it
 installed.
 
 
+
 Forked from https://github.com/sb2nov/resume.git
 
 *Special Thanks to Sourabh Bajaj for this resumé Template!*
