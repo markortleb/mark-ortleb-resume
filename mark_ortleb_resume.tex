@@ -48,9 +48,9 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[2]{
+\newcommand{\resumeItem}[1]{
 	\item\small{
-		\textbf{#1}{: #2 \vspace{-2pt}}
+		{#1 \vspace{2pt}}
 	}
 }
 
@@ -115,45 +115,46 @@
 	{Dice.com}{Denver, CO}
 	{Data Engineer}{Nov 2021 - Present}
 	\resumeItemListStart
-	\resumeItem{Data Warehousing}
-	{Setup, schema design and management of Amazon Redshift. Built an internal app for access to the data using a web interface. Dataduct integration for daily ETL injection into Redshift.}
+	\resumeItem
+	{Maintained the Airflow data ingestion processes and responded to issues as needed.}
+	\resumeItem
+	{Migrated legacy data to be presented in the Data Warehouse using dbt.}
+	\resumeItem
+	{Conducted end to end data modeling, by working with other teams within the organization to understand the business value of data that would be presented in the Redshift Data Warehouse.}
+	\resumeItem
+	{Changed non-Type-2 dimensional models into Type-2 slowly changing dimensions, such that changes to a record are reflected, thus enabling as-is/as-was reporting.}
 	\resumeItemListEnd
 	
-	% --------Multiple Positions Heading------------
-	%    \resumeSubSubheading
-	%     {Software Engineer I}{Oct 2014 - Sep 2016}
-	%     \resumeItemListStart
-	%        \resumeItem{Apache Beam}
-	%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-	%     \resumeItemListEnd
-	%    \resumeSubHeadingListEnd
-	%-------------------------------------------
 	
 	\resumeSubheading
 	{Shaw Communications}{Denver, CO}
 	{Big Data Developer}{Mar 2019 - Nov 2021}
 	\resumeItemListStart
-	\resumeItem{Data Warehousing}
-	{Setup, schema design and management of Amazon Redshift. Built an internal app for access to the data using a web interface. Dataduct integration for daily ETL injection into Redshift.}
+	\resumeItem
+	{Created and maintained ETL pipelines, which were mostly written with PySpark or Hive on EMR.}
+	\resumeItem
+	{Troubleshooted and resolved data related issues. This included answering alerts, and analyzing/fixing the tables in S3 for various data quality issues.}
+	\resumeItem
+	{Unified customer data between Shaw Communications and it's subsidiary, Freedom Mobile, by using PySpark to pull records from the Snowflake Data Warehouse, perform transformations, and load the transformed records to ElasticSearch.}
+	\resumeItem
+	{Assisted another team with the development of an API that loads posted records to an SQS Queue, which would then trigger a Lambda function to transform batches of data, and send it to an external database. The CICD infrastructure was setup using the Serverless Framework.}
 	\resumeItemListEnd
 	
 	\resumeSubheading
 	{Scott's Liquid Gold}{Denver, CO}
 	{Computer Programmer}{Jun 2018 - Mar 2019}
 	\resumeItemListStart
-	\resumeItem{IBM i}
-	{Maintained the integrity of business and system processes on self hosted IBM i midrange computer.}
-	\resumeItem{Report Generation}
-	{Resolved problems in the month-end report generation process by doing a complete overhaul of the legacy code base.}
-	\resumeItem{Win32 Desktop App}
-	{Initiated inter-platform communication between PC workstations and the DB2 database on the IBM i.}
+	\resumeItem
+	{Maintained the integrity of business and system processes on the self hosted IBM i mid-range computer.}
+	\resumeItem
+	{Completely overhauled the legacy month-end process to a stable and reliable state.}
+	\resumeItem
+	{Designed a "client side" business application for Windows machines using C++ and the Win32 API, which allowed users to drag and drop from a list of products and load a new inventory list back to the IBM i database.}
+	\resumeItem
+	{Developed an RPG IV program on the IBM i to mark-up and style "bill of lading" documents, which would automatically be sent to a printer in the shipping department upon order submission.}
 	\resumeItemListEnd
 	
-	
 	\resumeSubHeadingListEnd
-	
-	
-
 	
 	
 	%--------PROGRAMMING SKILLS------------
@@ -169,7 +170,7 @@
 	    	\textbf{Data Tools}{: dbt, SQL, Spark, Hive}
 	    	}
     	\item{
-    		\textbf{AWS Tools}{: S3, Glue, Athena, EMR, API Gateway, CloudFormation}
+    		\textbf{AWS Tools}{: S3, Glue, Athena, EMR, API Gateway, CloudFormation, CodeBuild}
     	}
     	\item{
     		\textbf{Other Tools}{: Docker, HTML, CSS, Airflow}
